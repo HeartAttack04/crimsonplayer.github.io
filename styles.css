@@ -319,6 +319,7 @@ header{
     height: 75px;
     padding: 4px;
     padding-bottom: 2px;
+    display: none;
 }
 
 .player{
