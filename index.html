@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimsonPlayer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <h2 class="timeOfDay">Good Evening,
+            <p class="accountName">H3art4ttack</p>
+        </h2>
+        <div class="settings">
+            <i id="settingsIcon" class="bi bi-gear"></i>
+            <img id="accountPhoto" href="#" src="images/accountPhoto.png">
+        </div>
+    </header>
+
+        <div class="content">
+
+            <div class="likedSongs">
+                <h2>Liked Songs</h2>
+                <i class="bi bi-suit-heart"></i>
+            </div>
+
+            <div class="moreOptions">
+                <div class="youFollow">
+                    <h2>You Follow</h2>
+                    <i class="bi bi-person-plus"></i>
+                </div>
+                <div class="friends">
+                    <h2>Friends</h2>
+                    <i class="bi bi-person"></i>
+                </div>
+            </div>
+
+            <div class="discover">
+                <div class="recently">
+                    <h2>Recently played</h2>
+                    <ul class="recSongs">
+                        <li id="1" class="songItem" onclick="pustiPesmu(this,1)">
+                            <img src="images/accountPhoto.png">
+                            <div class="title">
+                                <h3>Sub_atomic</h3>
+                                <h4>H3art4ttack</h4>
+                            </div>
+                            <i class="bi bi-play"></i>
+                        </li>
+                        <li id="2" class="songItem" onclick="pustiPesmu(this,2)">
+                            <img src="images/accountPhoto.png">
+                            <div class="title">
+                                <h3>All Night</h3>
+                                <h4>Kaligo</h4>
+                            </div>
+                            <i class="bi bi-play"></i>
+                        </li>
+                        <li id="3" class="songItem" onclick="pustiPesmu(this,3)">
+                            <img src="images/accountPhoto.png">
+                            <div class="title">
+                                <h3>Chasing The Moon</h3>
+                                <h4>Creator</h4>
+                            </div>
+                            <i class="bi bi-play"></i>
+                        </li>
+                        <li id="4" class="songItem" onclick="pustiPesmu(this,4)">
+                            <img src="images/accountPhoto.png">
+                            <div class="title">
+                                <h3>Project 8</h3>
+                                <h4>Creator</h4>
+                            </div>
+                            <i class="bi bi-play"></i>
+                        </li>
+                        <li id="5" class="songItem" onclick="pustiPesmu(this,5)">
+                            <img src="images/accountPhoto.png">
+                            <div class="title">
+                                <h3>Never gonna give you up</h3>
+                                <h4>Rick Astley</h4>
+                            </div>
+                            <i class="bi bi-play"></i>
+                        </li>
+                    </ul>
+
+                    <h2>Recommended Artists</h2>
+                    <ul class="recArtists">
+                        <li>
+                            <img src="images/accountPhoto.png">
+                        </li>
+                        <li>
+                            <img src="images/accountPhoto.png">
+                        </li>
+                        <li>
+                            <img src="images/accountPhoto.png">
+                        </li>
+                        <li>
+                            <img src="images/accountPhoto.png">
+                        </li>
+                        <li>
+                            <img src="images/accountPhoto.png">
+                        </li>
+                        <li>
+                            <img src="images/accountPhoto.png">
+                        </li>
+                        <li>
+                            <img src="images/accountPhoto.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="outer-player">
+        <div class="player">
+            <div class="customSeek" id="customSeek"></div>
+            <div class="customFollow" id="customFollow"></div>
+            <div class="customDot" id="customDot"></div>
+            <input id="songTime" class="songTime" type="range" value="0" min="0" max="100">
+            <div class="currentSong">
+                <img class="songBanner" src="images/accountPhoto.png">
+                <div class="title">
+                    <h3>Song Title Right Here</h3>
+                    <h4>Creator that made the song</h4>
+                </div>
+            </div>
+            <div class="playercontrols">
+                <i class="bi bi-suit-heart" id="heart"></i>
+                <i class="bi bi-skip-start" id="back"></i>
+                <i class="bi bi-play-circle" id="masterPlay"></i>
+                <i class="bi bi-skip-end" id="next"></i>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="menu">
+            <li>
+                <i class="bi bi-house"></i>
+                <h3>Home</h3>
+            </li>
+            <li>
+                <i class="bi bi-search"></i>
+                <h3>Search</h3>
+            </li>
+            <li>
+                <i class="bi bi-file-earmark-music"></i>
+                <h3>Playlists</h3>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
