@@ -506,7 +506,6 @@ header{
 
 .playercontrols{
     display: flex;
-    display: none;
     align-items: center;
 }
 
