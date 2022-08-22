@@ -39,7 +39,7 @@ header{
 }
 
 .accountName{
-    color: rgb(183, 0, 255);
+    color: orange;
     font-size: 30px;
 }
 
@@ -70,7 +70,7 @@ header{
 }
 
 #settingsIcon:hover{
-    color: rgb(183, 0, 255);
+    color: orange;
 }
 
 /* Content */
@@ -92,7 +92,7 @@ header{
     width: 100%;
     height: 17.5%;
     background-color: rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(to right top, #b700ff, #9e00ff, #8000ff, #5a00ff, #0001ff);
+    background-image: linear-gradient(to right top, #ffa500, #fc8a00, #f86c00, #f34a01, #eb1212);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     border-radius: 15px;
@@ -112,7 +112,7 @@ header{
 }
 
 .likedSongs:hover{
-    filter: brightness(2);
+    filter: brightness(1.5);
 }
 
 .moreOptions{
@@ -131,7 +131,7 @@ header{
     width: 50%;
     height: 100%;
     margin-right: 5px;
-    background-image: linear-gradient(to right top, #22002e, #002962, #004c76, #00695b, #00811c);
+    background-image: linear-gradient(to right top, #1ac000, #00bb3c, #00b658, #00af6d, #00a87c);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -147,7 +147,7 @@ header{
 }
 
 .moreOptions .youFollow:hover{
-    filter: brightness(2);
+    filter: brightness(1.5);
 }
 
 .moreOptions .friends{
@@ -155,7 +155,7 @@ header{
     width: 50%;
     margin-left: 5px;
     height: 100%;
-    background-image: linear-gradient(to right top, #480062, #8f0055, #bb223d, #cd611e, #c69a00);
+    background-image: linear-gradient(to right top, #0000c0, #3e00ba, #5600b3, #6700ae, #7500a8);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -171,16 +171,15 @@ header{
 }
 
 .moreOptions .friends:hover{
-    filter: brightness(2);
+    filter: brightness(1.5);
 }
 
 .discover{
     width: 100%;
-    padding-bottom: 14%;
 }
 
 .recently{
-    padding: 10px;
+    padding: 5px;
 }
 
 .recently h2{
@@ -194,24 +193,27 @@ header{
 .recSongs li{
     position: relative;
     display: flex;
+    height: 50px;
     align-items: center;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     transition: all 0.2s linear;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .recSongs .active{
-    background-color: rgba(119, 0, 255, 0.4);
+    background-color: rgba(255, 166, 0, 0.4);
 }
 
 .recSongs li:hover{
-    background-color: rgba(119, 0, 255, 0.4);
+    background-color: rgba(255, 166, 0, 0.4);
 }
 
 .recSongs li img{
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 }
 
 .recSongs li h3{
@@ -221,7 +223,7 @@ header{
 }
 
 .recSongs li h4{
-    color: rgb(183, 0, 255);
+    color: orange;
     line-height: 20px;
     padding-left: 10px;
 }
@@ -250,8 +252,8 @@ header{
 
 .recArtists li{
     list-style-type: none;
-    min-width: 100px;
-    height: 100%;
+    min-width: 80px;
+    height: 80%;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 50%;
@@ -273,7 +275,7 @@ header{
 
 .outer-player{
     position: absolute;
-    bottom: 90px;
+    bottom: 80px;
     width: 100%;
     height: 75px;
     padding: 4px;
@@ -319,7 +321,7 @@ header{
     height: 7.5px;
     top: -2.5px;
     border-radius: 50%;
-    background-color: hotpink;
+    background-color: rgb(255, 181, 44);
     box-shadow: 0px 0px 2px black;
 }
 
@@ -327,7 +329,7 @@ header{
     position: absolute;
     width: 0%;
     height: 3px;
-    background-color: rgb(183, 0, 255);
+    background-color: orange;
     top: 0;
 }
 
@@ -359,7 +361,7 @@ header{
 }
 
 .currentSong h4{
-    color: rgb(183, 0, 255);
+    color: orange;
     line-height: 20px;
     white-space: nowrap;
     max-width: 90%;
@@ -376,6 +378,7 @@ header{
     color: white;
     font-size: 30px;
     padding: 10px;
+    padding-top: 15px;
     cursor: pointer;
     transition: all 0.2s linear;
 }
@@ -383,6 +386,7 @@ header{
 .playercontrols i:nth-child(1){
     font-size: 30px;
     padding: 5px;
+    padding-top: 15px;
 }
 
 .playercontrols i:nth-child(2){
@@ -394,17 +398,17 @@ header{
 }
 
 .playercontrols i:hover{
-    color: rgb(183, 0, 255);
+    color: orange;
 }
 
 /* Footer */
 
 footer{
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     border-top: 2px solid white;
     width: 100%;
-    height: 90px;
+    height: 80px;
 }
 
 .menu{
@@ -433,11 +437,11 @@ footer{
 }
 
 .menu li:hover{
-    background-color: rgba(119, 0, 255, 0.4);
+    background-color: rgba(255, 166, 0, 0.4);
 }
 
 .menu li i{
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .menu li h3{
