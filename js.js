@@ -107,8 +107,8 @@ function openBigPlayer(){
     currentSong.classList.add('activecur');
     songBanner.classList.add('activeimg');
     exitBigPlayer.classList.add('activexit');
-    backButton.classList.add('activeback');
-    nextButton.classList.add('activenext');
+    backButton.style.display = 'block';
+    nextButton.style.display = 'block';
 }
 
 function closeBigPlayer(){
@@ -116,6 +116,6 @@ function closeBigPlayer(){
     currentSong.classList.remove('activecur');
     songBanner.classList.remove('activeimg');
     exitBigPlayer.classList.remove('activexit');
-    backButton.classList.remove('activeback');
-    nextButton.classList.remove('activenext');
+    backButton.style.display = 'none';
+    nextButton.style.display = 'none';
 }
