@@ -119,3 +119,4 @@ function closeBigPlayer(){
     backButton.style.display = 'none';
     nextButton.style.display = 'none';
 }
+
