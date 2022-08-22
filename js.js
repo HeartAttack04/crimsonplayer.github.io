@@ -95,3 +95,27 @@ song.addEventListener('timeupdate', ()=>{
 songTime.addEventListener('change', ()=>{
     song.currentTime = songTime.value * song.duration / 100;
 })
+
+var songBanner = document.getElementsByClassName('songBanner')[0];
+var currentSong = document.getElementsByClassName('currentSong')[0];
+var exitBigPlayer = document.getElementsByClassName('exitBigPlayer')[0];
+var backButton = document.getElementById('back');
+var nextButton = document.getElementById('next');
+
+function openBigPlayer(){
+    player.classList.add('activeplayer');
+    currentSong.classList.add('activecur');
+    songBanner.classList.add('activeimg');
+    exitBigPlayer.classList.add('activexit');
+    backButton.classList.add('activeback');
+    nextButton.classList.add('activenext');
+}
+
+function closeBigPlayer(){
+    player.classList.remove('activeplayer');
+    currentSong.classList.remove('activecur');
+    songBanner.classList.remove('activeimg');
+    exitBigPlayer.classList.remove('activexit');
+    backButton.classList.remove('activeback');
+    nextButton.classList.remove('activenext');
+}
