@@ -291,8 +291,8 @@ header{
     border: 1px solid rgb(48, 48, 48);
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .songTime{
@@ -334,6 +334,8 @@ header{
 
 .currentSong{
     display: flex;
+    align-items: center;
+    width: 150px;
 }
 
 .currentSong img{
@@ -345,13 +347,14 @@ header{
 
 .currentSong .title{
     margin-top: 12.5px;
+    width: 100%;
 }
 
 .currentSong h3{
     color: white;
     line-height: 20px;
     white-space: nowrap;
-    max-width: 150px;
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -360,20 +363,19 @@ header{
     color: rgb(183, 0, 255);
     line-height: 20px;
     white-space: nowrap;
-    max-width: 130px;
+    max-width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .playercontrols{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .playercontrols i{
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     padding: 10px;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -385,7 +387,11 @@ header{
 }
 
 .playercontrols i:nth-child(2){
-    padding: 15px;
+    display: none;
+}
+
+.playercontrols i:nth-child(4){
+    display: none;
 }
 
 .playercontrols i:hover{
