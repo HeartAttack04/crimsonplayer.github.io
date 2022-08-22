@@ -2,6 +2,7 @@ const song = new Audio('1.mp3');
 var username = 'H3art4ttack';
 
 var timeH2 = document.getElementById('timeOfDay');
+var player = document.getElementById('player');
 
 function getTime(){
     var today = new Date()
@@ -56,6 +57,7 @@ masterPlay.addEventListener('click', ()=>{
 })
 
 function playMusic(){
+    player.style.display = 'block';
     song.play();
     masterPlay.classList.remove('bi-play-circle');
     masterPlay.classList.add('bi-pause-circle');
