@@ -525,20 +525,12 @@ header{
     padding-top: 15px;
 }
 
-#back{
+.playercontrols i:nth-child(2){
     display: none;
 }
 
-.activeback{
-    display: block;
-}
-
-#next{
+.playercontrols i:nth-child(4){
     display: none;
-}
-
-.activenext{
-    display: block;
 }
 
 .playercontrols i:hover{
