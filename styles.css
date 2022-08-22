@@ -353,7 +353,7 @@ header{
     padding: 4px;
     padding-bottom: 2px;
     display: none;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
 }
 
 .player{
