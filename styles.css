@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('siteImages/gradient.gif');
+    background-image: url('gradient.gif');
     background-size: cover;
     background-blend-mode:hard-light;
     overflow: hidden;
