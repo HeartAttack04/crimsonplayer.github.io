@@ -1,8 +1,8 @@
-const song = new Audio('songs/1.mp3');
+const song = new Audio('1.mp3');
 
 function pustiPesmu(lipesme,rbrPesme){
     makeAllbackgrounds();
-    song.src = "songs/" + rbrPesme + ".mp3";
+    song.src = rbrPesme + ".mp3";
     if(song.paused || song.currentTime <= 0){
         playMusic();
         lipesme.style.backgroundColor = "rgba(119, 0, 255, 0.4)";
