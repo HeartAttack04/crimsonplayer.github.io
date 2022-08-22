@@ -1,11 +1,29 @@
 const song = new Audio('1.mp3');
+var username = 'H3art4ttack';
+
+var timeH2 = document.getElementById('timeOfDay');
+
+function getTime(){
+    var today = new Date()
+    var curHr = today.getHours()
+
+    if (curHr > 7 && curHr < 12) {
+        timeH2.innerHTML = 'Good Morning,' + '<p class="accountName">' + username + '</p>';
+    } else if (curHr > 12 && curHr < 18) {
+        timeH2.innerHTML = 'Good Afternoon,' + '<p class="accountName">' + username + '</p>';
+    } else if(curHr > 18) {
+        timeH2.innerHTML = 'Good Evening,' + '<p class="accountName">' + username + '</p>';
+    } else{
+        timeH2.innerHTML = 'Quite Early,' + '<p class="accountName">' + username + '</p>';
+    }
+}
 
 function pustiPesmu(lipesme,rbrPesme){
-    makeAllbackgrounds();
+    makeAllBackgrounds();
     song.src = rbrPesme + ".mp3";
     if(song.paused || song.currentTime <= 0){
         playMusic();
-        lipesme.style.backgroundColor = "rgba(119, 0, 255, 0.4)";
+        lipesme.style.backgroundColor = "rgba(255, 166, 0, 0.4)";
         lipesme.classList.add("active");
     }
     else{
@@ -14,9 +32,16 @@ function pustiPesmu(lipesme,rbrPesme){
     }
 }
 
-const makeAllbackgrounds = () =>{
+const makeAllBackgrounds = () =>{
     Array.from(document.getElementsByClassName('songItem')).forEach((element)=>{
             element.style.backgroundColor = "transparent";
+    })
+}
+
+const makeAllPlayes = () =>{
+    Array.from(document.getElementsByClassName('bi bi-play')).forEach((element)=>{
+        element.classList.remove('bi-pause');
+        element.classList.add('bi-play');
     })
 }
 
@@ -45,6 +70,10 @@ song.addEventListener('ended', ()=>{
     stopMusic();
 })
 
+song.addEventListener('pause', ()=>{
+    stopMusic();
+})
+
 var songTime = document.getElementById("songTime");
 var customDot = document.getElementById("customDot");
 var customFollow = document.getElementById("customFollow");
@@ -53,7 +82,11 @@ song.addEventListener('timeupdate', ()=>{
 
     let progressBar = parseInt((song.currentTime/song.duration)*100);
     songTime.value = progressBar;
-    customDot.style.left = progressBar + "%";
+    if(progressBar >= 99.5){
+        customDot.style.left = "99.6%";
+    }else{
+        customDot.style.left = progressBar + "%";
+    }
     customFollow.style.width = progressBar + "%";
 })
 
