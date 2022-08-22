@@ -56,16 +56,18 @@ header{
 }
 
 #accountPhoto{
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin: 5px;
     transition: all 0.1s linear;
     cursor: pointer;
+    border: 2px solid white;
 }
 
 #accountPhoto:hover{
     filter: brightness(1.5);
+    border: 2px solid orange;
 }
 
 .settings{
@@ -74,7 +76,7 @@ header{
 }
 
 #settingsIcon{
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     margin: 15px;
     transition: all 0.1s linear;
