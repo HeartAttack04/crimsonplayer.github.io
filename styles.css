@@ -444,7 +444,6 @@ header{
 }
 
 .exitBigPlayer:hover{
-    transform: rotate(10deg);
     color: orange;
 }
 
@@ -479,7 +478,7 @@ header{
     color: white;
     line-height: 20px;
     white-space: nowrap;
-    max-width: 100%;
+    max-width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-touch-callout: none;
@@ -494,7 +493,7 @@ header{
     color: orange;
     line-height: 20px;
     white-space: nowrap;
-    max-width: 90%;
+    max-width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-touch-callout: none;
