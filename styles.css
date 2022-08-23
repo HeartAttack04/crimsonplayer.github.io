@@ -378,11 +378,16 @@ header{
     justify-content: space-between;
 }
 
+.activeplayer2{
+    border-radius: 0px;
+}
+
 .activeplayer{
     height: 100%;
     width: 100%;
     background-color: black;
     background-size: cover;
+    padding: 0px;
 }
 
 #openBigPlayer{
