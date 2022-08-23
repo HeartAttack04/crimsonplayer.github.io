@@ -9,9 +9,9 @@
     <script src="js.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
-<body>
+<body onload="getTime()">
     <header>
-        <h2 class="timeOfDay">Good Evening,
+        <h2 id="timeOfDay" class="timeOfDay">Good Evening,
             <p class="accountName">H3art4ttack</p>
         </h2>
         <div class="settings">
@@ -40,7 +40,7 @@
 
             <div class="discover">
                 <div class="recently">
-                    <h2>Recently played</h2>
+                    <h2>You might like</h2>
                     <ul class="recSongs">
                         <li id="1" class="songItem" onclick="pustiPesmu(this,1)">
                             <img src="accountPhoto.png">
