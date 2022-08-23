@@ -19,10 +19,19 @@ function getTime(){
     }
 }
 
+var currentSongName = document.getElementById('currentSongName');
+var currentSongCreator = document.getElementById('currentSongCreator');
+var currentSongBanner = document.getElementById('songBanner');
+
 function pustiPesmu(lipesme,rbrPesme){
     makeAllBackgrounds();
     song.src = rbrPesme + ".mp3";
     if(song.paused || song.currentTime <= 0){
+        deca = lipesme.children;
+        currentSongBanner.src = deca[0].src;
+        deca2 = deca[1].children;
+        currentSongName.innerHTML = deca2[0].innerHTML;
+        currentSongCreator.innerHTML = deca2[1].innerHTML;
         playMusic();
         lipesme.style.backgroundColor = "rgba(255, 166, 0, 0.4)";
         lipesme.classList.add("active");
@@ -84,8 +93,8 @@ song.addEventListener('timeupdate', ()=>{
 
     let progressBar = parseInt((song.currentTime/song.duration)*100);
     songTime.value = progressBar;
-    if(progressBar >= 99.5){
-        customDot.style.left = "99.6%";
+    if(progressBar >= 99){
+        customDot.style.left = "98.5%";
     }else{
         customDot.style.left = progressBar + "%";
     }
