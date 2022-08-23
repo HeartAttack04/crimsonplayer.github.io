@@ -25,12 +25,15 @@ var currentSongName = document.getElementById('currentSongName');
 var currentSongCreator = document.getElementById('currentSongCreator');
 var currentSongBanner = document.getElementById('songBanner');
 
+var currentImage;
+
 function pustiPesmu(lipesme,rbrPesme){
     makeAllBackgrounds();
     song.src = rbrPesme + ".mp3";
     if(song.paused || song.currentTime <= 0){
         deca = lipesme.children;
         currentSongBanner.src = deca[0].src;
+        currentImage = currentSongBanner;
         deca2 = deca[1].children;
         currentSongName.innerHTML = deca2[0].innerHTML;
         currentSongCreator.innerHTML = deca2[1].innerHTML;
@@ -120,6 +123,7 @@ var songTime = document.getElementById('songTime');
 
 function openBigPlayer(){
     player.classList.add('activeplayer');
+    player.style.backgroundImage = 'url("' + currentImage.src + '")';
     currentSong.classList.add('activecur');
     songBanner.classList.add('activeimg');
     exitBigPlayer.classList.add('activexit');
@@ -134,6 +138,7 @@ function openBigPlayer(){
 
 function closeBigPlayer(){
     player.classList.remove('activeplayer');
+    player.style.backgroundImage = 'none';
     currentSong.classList.remove('activecur');
     songBanner.classList.remove('activeimg');
     exitBigPlayer.classList.remove('activexit');
