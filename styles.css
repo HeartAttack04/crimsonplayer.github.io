@@ -351,7 +351,7 @@ header{
 /* Player */
 
 .outer-player{
-    position: absolute;
+    position: fixed;
     bottom: 80px;
     width: 100%;
     height: 75px;
@@ -378,7 +378,6 @@ header{
     height: 100%;
     width: 100%;
     background-color: black;
-    background-image: url('accountPhoto.png');
     background-size: cover;
 }
 
