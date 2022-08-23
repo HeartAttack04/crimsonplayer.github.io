@@ -99,8 +99,13 @@ songTime.addEventListener('change', ()=>{
 var songBanner = document.getElementsByClassName('songBanner')[0];
 var currentSong = document.getElementsByClassName('currentSong')[0];
 var exitBigPlayer = document.getElementsByClassName('exitBigPlayer')[0];
+var playercontrols = document.getElementsByClassName('playercontrols')[0];
 var backButton = document.getElementById('back');
 var nextButton = document.getElementById('next');
+var customSeek = document.getElementById('customSeek');
+var customFollow = document.getElementById('customFollow');
+var customDot = document.getElementById('customDot');
+var songTime = document.getElementById('songTime');
 
 function openBigPlayer(){
     player.classList.add('activeplayer');
@@ -109,6 +114,11 @@ function openBigPlayer(){
     exitBigPlayer.classList.add('activexit');
     backButton.style.display = 'block';
     nextButton.style.display = 'block';
+    playercontrols.classList.add('activeplcntrls');
+    customSeek.classList.add('activeseek');
+    customFollow.classList.add('activefollow');
+    customDot.classList.add('activedot');
+    songTime.classList.add('activesongtime');
 }
 
 function closeBigPlayer(){
@@ -118,4 +128,8 @@ function closeBigPlayer(){
     exitBigPlayer.classList.remove('activexit');
     backButton.style.display = 'none';
     nextButton.style.display = 'none';
+    playercontrols.classList.remove('activeplcntrls');
+    customFollow.classList.remove('activefollow');
+    customDot.classList.remove('activedot');
+    songTime.classList.remove('activesongtime');
 }
