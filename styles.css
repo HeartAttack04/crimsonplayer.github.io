@@ -20,6 +20,11 @@ body{
     overflow: hidden;
 }
 
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+}
+
 /* header  */
 
 header{
