@@ -110,6 +110,7 @@ songTime.addEventListener('change', ()=>{
     song.currentTime = songTime.value * song.duration / 100;
 })
 
+var content = document.getElementsByClassName('content')[0];
 var songBanner = document.getElementsByClassName('songBanner')[0];
 var currentSong = document.getElementsByClassName('currentSong')[0];
 var exitBigPlayer = document.getElementsByClassName('exitBigPlayer')[0];
@@ -134,6 +135,7 @@ function openBigPlayer(){
     customFollow.classList.add('activefollow');
     customDot.classList.add('activedot');
     songTime.classList.add('activesongtime');
+    content.classList.add('activecontent');
 }
 
 function closeBigPlayer(){
@@ -149,4 +151,5 @@ function closeBigPlayer(){
     customFollow.classList.remove('activefollow');
     customDot.classList.remove('activedot');
     songTime.classList.remove('activesongtime');
+    content.classList.remove('activecontent');
 }
