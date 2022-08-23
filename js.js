@@ -111,6 +111,7 @@ songTime.addEventListener('change', ()=>{
 })
 
 var content = document.getElementsByClassName('content')[0];
+var player2 = document.getElementsByClassName('player')[0];
 var songBanner = document.getElementsByClassName('songBanner')[0];
 var currentSong = document.getElementsByClassName('currentSong')[0];
 var exitBigPlayer = document.getElementsByClassName('exitBigPlayer')[0];
@@ -125,6 +126,7 @@ var songTime = document.getElementById('songTime');
 function openBigPlayer(){
     player.classList.add('activeplayer');
     player.style.backgroundImage = 'url("' + currentImage.src + '")';
+    player2.classList.add('activeplayer2');
     currentSong.classList.add('activecur');
     songBanner.classList.add('activeimg');
     exitBigPlayer.classList.add('activexit');
@@ -141,6 +143,7 @@ function openBigPlayer(){
 function closeBigPlayer(){
     player.classList.remove('activeplayer');
     player.style.backgroundImage = 'none';
+    player2.classList.remove('activeplayer2');
     currentSong.classList.remove('activecur');
     songBanner.classList.remove('activeimg');
     exitBigPlayer.classList.remove('activexit');
