@@ -104,6 +104,10 @@ header{
     position: relative;
 }
 
+.activecontent{
+    pointer-events: none;
+}
+
 .content::-webkit-scrollbar{
     display: none;
 }
