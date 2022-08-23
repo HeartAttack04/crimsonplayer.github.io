@@ -51,31 +51,31 @@
                             <i class="bi bi-play"></i>
                         </li>
                         <li id="2" class="songItem" onclick="pustiPesmu(this,2)">
-                            <img src="accountPhoto.png">
+                            <img src="1.jpg">
+                            <div class="title">
+                                <h3>Chasing The Moon</h3>
+                                <h4>Kaligo</h4>
+                            </div>
+                            <i class="bi bi-play"></i>
+                        </li>
+                        <li id="3" class="songItem" onclick="pustiPesmu(this,3)">
+                            <img src="2.jpg">
                             <div class="title">
                                 <h3>All Night</h3>
                                 <h4>Kaligo</h4>
                             </div>
                             <i class="bi bi-play"></i>
                         </li>
-                        <li id="3" class="songItem" onclick="pustiPesmu(this,3)">
-                            <img src="accountPhoto.png">
-                            <div class="title">
-                                <h3>Chasing The Moon</h3>
-                                <h4>Creator</h4>
-                            </div>
-                            <i class="bi bi-play"></i>
-                        </li>
                         <li id="4" class="songItem" onclick="pustiPesmu(this,4)">
-                            <img src="accountPhoto.png">
+                            <img src="2.jpg">
                             <div class="title">
                                 <h3>Project 8</h3>
-                                <h4>Creator</h4>
+                                <h4>Kaligo</h4>
                             </div>
                             <i class="bi bi-play"></i>
                         </li>
                         <li id="5" class="songItem" onclick="pustiPesmu(this,5)">
-                            <img src="accountPhoto.png">
+                            <img src="5.jpg">
                             <div class="title">
                                 <h3>Never gonna give you up</h3>
                                 <h4>Rick Astley</h4>
@@ -119,10 +119,10 @@
             <div class="customDot" id="customDot"></div>
             <input id="songTime" class="songTime" type="range" value="0" min="0" max="100">
             <div class="currentSong">
-                <img class="songBanner" src="accountPhoto.png">
+                <img class="songBanner" id="songBanner" src="accountPhoto.png">
                 <div class="title">
-                    <h3>Song Title Right Here</h3>
-                    <h4>Creator</h4>
+                    <h3 id="currentSongName">Song Title Right Here</h3>
+                    <h4 id="currentSongCreator">Creator</h4>
                 </div>
             </div>
             <div onclick="openBigPlayer()" id="openBigPlayer"></div>
