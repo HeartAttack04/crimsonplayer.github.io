@@ -1,628 +1,147 @@
-/* Fonts :  'Roboto' 'Poppins' */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@300;400&display=swap');
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
-
-body{
-    background-color: #302e2e;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url('gradient.gif');
-    background-size: cover;
-    background-blend-mode:hard-light;
-    overflow: hidden;
-}
-
-body.modal-open {
-    overflow: hidden;
-    position: fixed;
-}
-
-/* header  */
-
-header{
-    position: relative;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2.5%;
-}
-
-.timeOfDay{
-    font-size: 20px;
-    color: white;
-    line-height: 25px;
-    padding: 2%;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.accountName{
-    color: orange;
-    font-size: 30px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-#accountPhoto{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin: 5px;
-    transition: all 0.1s linear;
-    cursor: pointer;
-    border: 2px solid white;
-}
-
-#accountPhoto:hover{
-    filter: brightness(1.5);
-    border: 2px solid rgb(192, 125, 0);
-}
-
-.settings{
-    display: flex;
-    align-items: center;
-}
-
-#settingsIcon{
-    font-size: 30px;
-    color: white;
-    margin: 15px;
-    transition: all 0.1s linear;
-    cursor: pointer;
-}
-
-#settingsIcon:hover{
-    color: orange;
-}
-
-/* Content */
-
-.content{
-    width: 100%;
-    height: 900px;
-    padding: 20px;
-    padding-bottom: 400px;
-    overflow-y: scroll;
-    position: relative;
-}
-
-.content::-webkit-scrollbar{
-    display: none;
-}
-
-.likedSongs{
-    width: 100%;
-    height: 17.5%;
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(to right top, #ffa500, #fc8a00, #f86c00, #f34a01, #eb1212);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border-radius: 15px;
-    display: flex;
-    padding: 25px;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
-    transition: all 0.1s linear;
-    cursor: pointer;
-}
-
-.likedSongs i{
-    font-size: 40px;
-    transition: all 0.1s linear;
-}
-
-.likedSongs:hover{
-    filter: brightness(1.5);
-}
-
-.likedSongs h2{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.moreOptions{
-    width: 100%;
-    height: 13%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.1s linear;
-}
-
-.moreOptions .youFollow{
-    font-size: 12.5px;
-    width: 50%;
-    height: 100%;
-    margin-right: 5px;
-    background-image: linear-gradient(to right top, #1ac000, #00bb3c, #00b658, #00af6d, #00a87c);
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s linear;
-}
-
-.moreOptions .youFollow h2{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.moreOptions .youFollow i{
-    font-size: 25px;
-}
-
-.moreOptions .youFollow:hover{
-    filter: brightness(1.5);
-}
-
-.moreOptions .friends{
-    font-size: 12.5px;
-    width: 50%;
-    margin-left: 5px;
-    height: 100%;
-    background-image: linear-gradient(to right top, #0000c0, #3e00ba, #5600b3, #6700ae, #7500a8);
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s linear;
-}
-
-.moreOptions .friends h2{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.moreOptions .friends i{
-    font-size: 25px;
-}
-
-.moreOptions .friends:hover{
-    filter: brightness(1.5);
-}
-
-.discover{
-    width: 100%;
-}
-
-.recently{
-    padding: 5px;
-}
-
-.recently h2{
-    color: white;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.recSongs{
-    list-style: none;
-}
-
-.recSongs li{
-    position: relative;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    transition: all 0.2s linear;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.recSongs .active{
-    background-color: rgba(255, 166, 0, 0.4);
-}
-
-.recSongs li:hover{
-    background-color: rgba(255, 166, 0, 0.4);
-}
-
-.recSongs li img{
-    width: 50px;
-    height: 50px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.recSongs li h3{
-    color: white;
-    line-height: 20px;
-    padding-left: 10px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.recSongs li h4{
-    color: orange;
-    line-height: 20px;
-    padding-left: 10px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.recSongs li i{
-    color: white;
-    font-size: 30px;
-    position: absolute;
-    right: 3%;
-}
-
-.recArtists{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    list-style: none;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    display: flex;
-    width: 100%;
-    height: 100px;
-}
-
-.recArtists::-webkit-scrollbar{
-    display: none;
-}
-
-.recArtists li{
-    list-style-type: none;
-    min-width: 80px;
-    height: 80%;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.2s linear;
-}
-
-.recArtists li:hover{
-    filter: brightness(2);
-}
-
-.recArtists li img{
-    width: 100%;
-    height: 100%;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Player */
-
-.outer-player{
-    position: absolute;
-    bottom: 80px;
-    width: 100%;
-    height: 75px;
-    padding: 4px;
-    padding-bottom: 2px;
-    display: none;
-    transition: all 0.3s linear;
-}
-
-.player{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgb(48, 48, 48);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.activeplayer{
-    height: 100%;
-    width: 100%;
-    background-image: url('gradient.gif');
-    background-size: cover;
-}
-
-#openBigPlayer{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    cursor: pointer;
-}
-
-.songTime{
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 0;
-    outline: none;
-    cursor: pointer;
-    scroll-behavior: smooth;
-    opacity: 0;
-}
-
-.activesongtime{
-    top: 77%;
-}
-
-.customSeek{
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    top: 0%;
-}
-
-.activeseek{
-    top: 77%;
-    width: 100%;
-}
-
-.customDot{
-    position: absolute;
-    width: 7.5px;
-    height: 7.5px;
-    top: -2.5px;
-    border-radius: 50%;
-    background-color: rgb(255, 181, 44);
-    box-shadow: 0px 0px 2px black;
-}
-
-.activedot{
-    top: 76.8%;
-}
-
-.customFollow{
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    background-color: orange;
-    top: 0;
-}
-
-.activefollow{
-    top: 77%;
-}
-
-.currentSong{
-    display: flex;
-    align-items: center;
-    width: 150px;
-    z-index: -2;
-}
-
-.exitBigPlayer{
-    color: white;
-    font-size: 35px;
-    transition: all 0.2s linear;
-    cursor: pointer;
-    position: absolute;
-    top: 12%;
-    left: 4%;
-    display: none;
-}
-
-.activexit{
-    display: block;
-}
-
-.exitBigPlayer:hover{
-    color: orange;
-}
-
-.player .activecur{
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.currentSong img{
-    width: 50px;
-    height: 50px;
-    margin: 8px;
-    border-radius: 3px;
-}
-
-.currentSong .activeimg{
-    width: 80%;
-    height: auto;
-    margin: 10px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    top: 0;
-}
-
-.currentSong .title{
-    margin-top: 5px;
-}
-
-.currentSong h3{
-    color: white;
-    line-height: 20px;
-    white-space: nowrap;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.currentSong h4{
-    color: orange;
-    line-height: 20px;
-    white-space: nowrap;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.playercontrols{
-    display: flex;
-    align-items: center;
-}
-
-.activeplcntrls{
-    position: absolute;
-    width: 100%;
-    top: 80%;
-    justify-content: center;
-}
-
-.playercontrols i{
-    color: white;
-    font-size: 30px;
-    padding: 10px;
-    padding-top: 15px;
-    cursor: pointer;
-    transition: all 0.2s linear;
-}
-
-.activeplcntrls i{
-    font-size: 45px;
-}
-
-.playercontrols i:nth-child(1){
-    font-size: 30px;
-    padding: 5px;
-    padding-top: 15px;
-}
-
-.activeplcntrls i:nth-child(1){
-    display: none;
-}
-
-.playercontrols i:nth-child(2){
-    display: none;
-}
-
-.playercontrols i:nth-child(4){
-    display: none;
-}
-
-.playercontrols i:hover{
-    color: orange;
-}
-
-/* Footer */
-
-footer{
-    position: fixed;
-    bottom: -2px;
-    border-top: 2px solid white;
-    width: 100%;
-    height: 80px;
-}
-
-.menu{
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1),transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.menu li{
-    color: white;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 33%;
-    height: 100%;
-    padding-top: 1%;
-    transition: all 0.2s linear;
-    cursor: pointer;
-    margin: 5px;
-    margin-left: 2.5px;
-    margin-right: 2.5px;
-    border-radius: 5px;
-}
-
-.menu li:hover{
-    background-color: rgba(255, 166, 0, 0.4);
-}
-
-.menu li i{
-    font-size: 24px;
-}
-
-.menu li h3{
-    font-weight: 300;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+const song = new Audio('1.mp3');
+var username = 'H3art4ttack';
+
+var timeH2 = document.getElementById('timeOfDay');
+var player = document.getElementById('player');
+
+function getTime(){
+    var today = new Date()
+    var curHr = today.getHours()
+
+    if (curHr > 7 && curHr < 12) {
+        timeH2.innerHTML = 'Good Morning,' + '<p class="accountName">' + username + '</p>';
+    } else if (curHr > 12 && curHr < 18) {
+        timeH2.innerHTML = 'Good Afternoon,' + '<p class="accountName">' + username + '</p>';
+    } else if(curHr > 18) {
+        timeH2.innerHTML = 'Good Evening,' + '<p class="accountName">' + username + '</p>';
+    } else{
+        timeH2.innerHTML = 'Quite Early,' + '<p class="accountName">' + username + '</p>';
+    }
+}
+
+getTime();
+
+var currentSongName = document.getElementById('currentSongName');
+var currentSongCreator = document.getElementById('currentSongCreator');
+var currentSongBanner = document.getElementById('songBanner');
+
+function pustiPesmu(lipesme,rbrPesme){
+    makeAllBackgrounds();
+    song.src = rbrPesme + ".mp3";
+    if(song.paused || song.currentTime <= 0){
+        deca = lipesme.children;
+        currentSongBanner.src = deca[0].src;
+        deca2 = deca[1].children;
+        currentSongName.innerHTML = deca2[0].innerHTML;
+        currentSongCreator.innerHTML = deca2[1].innerHTML;
+        playMusic();
+        lipesme.style.backgroundColor = "rgba(255, 166, 0, 0.4)";
+        lipesme.classList.add("active");
+    }
+    else{
+        stopMusic();
+        lipesme.classList.remove("active");
+    }
+}
+
+const makeAllBackgrounds = () =>{
+    Array.from(document.getElementsByClassName('songItem')).forEach((element)=>{
+            element.style.backgroundColor = "transparent";
+    })
+}
+
+const makeAllPlayes = () =>{
+    Array.from(document.getElementsByClassName('bi bi-play')).forEach((element)=>{
+        element.classList.remove('bi-pause');
+        element.classList.add('bi-play');
+    })
+}
+
+var masterPlay = document.getElementById('masterPlay');
+
+masterPlay.addEventListener('click', ()=>{
+    if(song.paused || song.currentTime <= 0){
+        playMusic();
+    }else{
+        stopMusic();
+    }
+})
+
+function playMusic(){
+    player.style.display = 'block';
+    song.play();
+    masterPlay.classList.remove('bi-play-circle');
+    masterPlay.classList.add('bi-pause-circle');
+}
+function stopMusic(){
+    song.pause();
+    masterPlay.classList.add('bi-play-circle');
+    masterPlay.classList.remove('bi-pause-circle');
+}
+
+song.addEventListener('ended', ()=>{
+    stopMusic();
+})
+
+song.addEventListener('pause', ()=>{
+    stopMusic();
+})
+
+var songTime = document.getElementById("songTime");
+var customDot = document.getElementById("customDot");
+var customFollow = document.getElementById("customFollow");
+
+song.addEventListener('timeupdate', ()=>{
+
+    let progressBar = parseInt((song.currentTime/song.duration)*100);
+    songTime.value = progressBar;
+    if(progressBar >= 99){
+        customDot.style.left = "98.5%";
+    }else{
+        customDot.style.left = progressBar + "%";
+    }
+    customFollow.style.width = progressBar + "%";
+})
+
+songTime.addEventListener('change', ()=>{
+    song.currentTime = songTime.value * song.duration / 100;
+})
+
+var songBanner = document.getElementsByClassName('songBanner')[0];
+var currentSong = document.getElementsByClassName('currentSong')[0];
+var exitBigPlayer = document.getElementsByClassName('exitBigPlayer')[0];
+var playercontrols = document.getElementsByClassName('playercontrols')[0];
+var backButton = document.getElementById('back');
+var nextButton = document.getElementById('next');
+var customSeek = document.getElementById('customSeek');
+var customFollow = document.getElementById('customFollow');
+var customDot = document.getElementById('customDot');
+var songTime = document.getElementById('songTime');
+
+function openBigPlayer(){
+    player.classList.add('activeplayer');
+    currentSong.classList.add('activecur');
+    songBanner.classList.add('activeimg');
+    exitBigPlayer.classList.add('activexit');
+    backButton.style.display = 'block';
+    nextButton.style.display = 'block';
+    playercontrols.classList.add('activeplcntrls');
+    customSeek.classList.add('activeseek');
+    customFollow.classList.add('activefollow');
+    customDot.classList.add('activedot');
+    songTime.classList.add('activesongtime');
+}
+
+function closeBigPlayer(){
+    player.classList.remove('activeplayer');
+    currentSong.classList.remove('activecur');
+    songBanner.classList.remove('activeimg');
+    exitBigPlayer.classList.remove('activexit');
+    backButton.style.display = 'none';
+    nextButton.style.display = 'none';
+    playercontrols.classList.remove('activeplcntrls');
+    customSeek.classList.remove('activeseek');
+    customFollow.classList.remove('activefollow');
+    customDot.classList.remove('activedot');
+    songTime.classList.remove('activesongtime');
 }
