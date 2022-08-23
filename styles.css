@@ -577,7 +577,7 @@ header{
 /* Footer */
 
 footer{
-    position: absolute;
+    position: fixed;
     bottom: -2px;
     border-top: 2px solid white;
     width: 100%;
