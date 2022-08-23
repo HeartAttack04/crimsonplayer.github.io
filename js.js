@@ -129,6 +129,7 @@ function closeBigPlayer(){
     backButton.style.display = 'none';
     nextButton.style.display = 'none';
     playercontrols.classList.remove('activeplcntrls');
+    customSeek.classList.remove('activeseek');
     customFollow.classList.remove('activefollow');
     customDot.classList.remove('activedot');
     songTime.classList.remove('activesongtime');
