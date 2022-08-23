@@ -378,8 +378,7 @@ header{
 .activeplayer{
     height: 100%;
     width: 100%;
-    background-image: url('gradient.gif');
-    background-size: cover;
+    background-color: black;
 }
 
 #openBigPlayer{
