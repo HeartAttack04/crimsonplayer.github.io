@@ -19,6 +19,8 @@ function getTime(){
     }
 }
 
+getTime();
+
 var currentSongName = document.getElementById('currentSongName');
 var currentSongCreator = document.getElementById('currentSongCreator');
 var currentSongBanner = document.getElementById('songBanner');
